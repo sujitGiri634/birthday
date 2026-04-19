@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mrunal 🎂</title>
+    <style>
+        body {
+            background-color: #D3AF37; /* Iron Man Gold */
+            color: #E30022; /* Iron Man Red */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        #slide1{
+            background: url(img/confetti.gif);
+            background-color: #fff;
+        }
+        .slide {
+            display: none;
+            background-color: #fff;
+            border: 8px solid #8b0000;
+            border-radius: 20px;
+            padding: 40px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 10px 10px 0px #8b0000;
+        }
+        .active {
+            display: block;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .btn {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+            font-family: inherit;
+            transition: transform 0.1s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #a30000;
+        }
+        .gift-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .gift-box {
+            font-size: 4em;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .gift-box:hover {
+            transform: scale(1.2);
+        }
+        .icon {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slide1" class="slide active">
+        <div class="icon"><img src="img/Iron_Man-removebg-preview.png"></div>
+        <h1>Happy Birthday Mrunal</h1>
+        <button class="btn" onclick="showSlide('slide2')">Next</button>
+    </div>
+
+    <div id="slide2" class="slide">
+        <div class="icon"><img src="img/Chibi_Iron_Man_sticker-removebg-preview.png"></div>
+        <h1>Are you ready?</h1>
+        <button class="btn" onclick="showSlide('slide4')">Yes</button>
+        <button class="btn" onclick="showSlide('slide3')">No</button>
+    </div>
+
+    <div id="slide3" class="slide">
+        <div class="icon"><img src="img/download-removebg-preview.png"></div>
+        <h1>I promise you will like it</h1>
+        <button class="btn" onclick="showSlide('slide2')">Try again</button>
+    </div>
+
+    <div id="slide4" class="slide">
+        <h1>I knew you'd make the right choice!</h1>
+        <p>Open it all !!</p>
+        <div class="gift-container">
+            <div class="gift-box" onclick="showSlide('slide-gift1')">🎁<br><span style="font-size: 20px;">Gift 1</span></div>
+            <div class="gift-box" onclick="showSlide('slide-gift2')">🎁<br><span style="font-size: 20px;">Gift 2</span></div>
+            <div class="gift-box" onclick="showSlide('slide-surprise')">❓<br><span style="font-size: 20px;">Surprise</span></div>
+        </div>
+    </div>
+
+    <div id="slide-gift1" class="slide">
+        <h1>Hey love,</h1>
+        <p>I just wanted to remind you how much you mean to me. Having you in my life makes everything brighter. Even the little things you do mean so much. I love you 3000. ❤️</p>
+        <button class="btn" onclick="showSlide('slide4')">Back</button>
+    </div>
+
+    <div id="slide-gift1" class="slide"></div>
+    <div id="slide-gift2" class="slide">s
+        <div class="icon">💐</div>
+        <h1>You're my favorite person.</h1>
+        <p>You make my world softer, brighter, and a lot more beautiful. You're the Pepper Potts to my Tony Stark.</p>
+        <button class="btn" onclick="showSlide('slide4')">Back</button>
+    </div>
+
+    <div id="slide-surprise" class="slide">
+        <div class="icon">🍿🎟️</div>
+        <h1>Will you come on a movie date with me?</h1>
+        <p>[text me if it's a yes]</p>
+        <button class="btn" onclick="showSlide('slide-final')">Next</button>
+    </div>
+
+    <div id="slide-final" class="slide">
+        <h1 style="font-size: 4em;">I ❤️ U</h1>
+    </div>
+
+    <script>
+        function showSlide(slideId) {
+            // Hide all slides
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            // Show the selected slide
+            document.getElementById(slideId).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
